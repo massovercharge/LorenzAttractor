@@ -20,32 +20,35 @@ from lorenz import filehandling
 class LorenzTest(unittest.TestCase):
     """
     This is a class for testing the Lorenz module.
-    
+
     The module contains test functions for the solver, plot and filehandling.
-    
+
     Attributes:
         None
     """
     def test_solver(self):
         """
         This function runs tests on the solver functionality of the lorenz
-        module.        
+        module.
         """
         # define test parameters for inout / output test of euler() function
         in1 = solver.lorenz_solver(sigma=1,
                                    beta=1,
                                    rho=1,
-                                   init=[3,2,1],
+                                   init=[3, 2, 1],
                                    N=4,
                                    t=1)
         in1.euler()
-        out1 = np.array([[3.,2.,1.], [2.,0.,6.], [0.,-10.,0.],[-10.,0.,0.]])
+        out1 = np.array([[3., 2., 1.],
+                         [2., 0., 6.],
+                         [0., -10., 0.],
+                         [-10., 0., 0.]])
 
         # define test parameters for wrong shape of init
         in2 = solver.lorenz_solver(sigma=1,
                                    beta=1,
                                    rho=1,
-                                   init=[1,1],
+                                   init=[1, 1],
                                    N=1,
                                    t=1)
         out2 = False
@@ -54,7 +57,7 @@ class LorenzTest(unittest.TestCase):
         in3 = solver.lorenz_solver(sigma=1,
                                    beta=1,
                                    rho=1,
-                                   init=[1,1,1],
+                                   init=[1, 1, 1],
                                    N=0,
                                    t=1)
         out3 = False
@@ -63,7 +66,7 @@ class LorenzTest(unittest.TestCase):
         in4 = solver.lorenz_solver(sigma=1,
                                    beta=1,
                                    rho=1,
-                                   init=[1,1,1],
+                                   init=[1, 1, 1],
                                    N=1,
                                    t=0)
         out4 = False
@@ -72,7 +75,7 @@ class LorenzTest(unittest.TestCase):
         in5 = solver.lorenz_solver(sigma=1,
                                    beta=8/3,
                                    rho=28,
-                                   init=[3,2,1],
+                                   init=[3, 2, 1],
                                    N=29,
                                    t=0.1)
         out5 = False
@@ -87,13 +90,13 @@ class LorenzTest(unittest.TestCase):
     def test_plot(self):
         """
         This function runs tests on the plot functionality of the lorenz
-        module.        
+        module.
         """
         # define test parameters for missing euler_path attribute in plot
         in1 = solver.lorenz_solver(sigma=10,
                                    beta=8/3,
                                    rho=6,
-                                   init=[3,2,1],
+                                   init=[3, 2, 1],
                                    N=1000,
                                    t=0.01)
         out1 = False
@@ -104,7 +107,7 @@ class LorenzTest(unittest.TestCase):
     def test_filehandling(self):
         """
         This function runs tests on the filehandling functionality of the
-        lorenz module.        
+        lorenz module.
         """
         self.assertEqual(filehandling.read_solver(filename=''), False)
 

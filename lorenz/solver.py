@@ -4,15 +4,15 @@ This file may contain the ODE solver
 """
 
 import numpy as np
-np.seterr(over = 'raise') # raise error for floating-point overflow
+np.seterr(over='raise') # raise error for floating-point overflow
 
 class lorenz_solver(object):
     """
     This is a class for managing parameters and calculating trajectories of a
     Lorenz attractor.
-    
+
     The lorenz_solver class is constructed to associate a calculated trajectory
-    with a set of parameters. This means that if the trajectory has already 
+    with a set of parameters. This means that if the trajectory has already
     been calculated for a given object and a parameter of that object
     is updated, then the trajectory will be deleted from the object.
 
@@ -20,7 +20,7 @@ class lorenz_solver(object):
         sigma (float): A system parameter, ex 10.
         beta (float): A system parameter, ex 3/8.
         rho (float): A system parameter, ex 6.
-        init (list): A set of corrdinates, the starting point for the 
+        init (list): A set of corrdinates, the starting point for the
         calculation, [x,y,z].
         N (int): Number of steps in the calculation.
         t (float): Stepsize for the calculation.
@@ -30,12 +30,12 @@ class lorenz_solver(object):
     def __init__(self, sigma, beta, rho, init, N=20000, t=0.02):
         """
         The constructor for lorenz_solver class.
-        
+
         Parameters:
             sigma (float): A system parameter, ex 10.
             beta (float): A system parameter, ex 3/8.
             rho (float): A system parameter, ex 6.
-            init (list): A set of coordinates, the starting point for the 
+            init (list): A set of coordinates, the starting point for the
             calculation, [x,y,z].
             N (int): Number of steps in the calculation.
             t (float): Stepsize for the calculation.
@@ -51,13 +51,13 @@ class lorenz_solver(object):
     def sigma(self):
         """
         A class method to return the current value of the sigma property.
-        
+
         Parameter:
             self: a lorenz_solver class object.
 
         Returns:
             float: the current sigma attribute value of self.
-        
+
         example
             self.sigma
         """
@@ -84,7 +84,7 @@ class lorenz_solver(object):
         if sigma != self._sigma:
             print("Updating sigma")
             self._sigma = sigma
-            if hasattr(self, '_euler_path'):
+            if hasattr(self,'_euler_path'):
                 print('Erasing existing trajectory')
                 delattr(self, '_euler_path')
         else:
@@ -94,13 +94,13 @@ class lorenz_solver(object):
     def beta(self):
         """
         A class method to return the current value of the beta property.
-        
+
         Parameter:
             self: a lorenz_solver class object.
 
         Returns:
             float: the current sigma attribute value of self.
-        
+
         example
             self.beta
         """
@@ -137,7 +137,7 @@ class lorenz_solver(object):
     def rho(self):
         """
         A class method to return the current value of the rho property.
-        
+
         Parameter:
             self: a lorenz_solver class object.
 
@@ -180,7 +180,7 @@ class lorenz_solver(object):
     def init(self):
         """
         A class method to return the current value of the init property.
-        
+
         Parameter:
             self: a lorenz_solver class object.
 
@@ -226,7 +226,7 @@ class lorenz_solver(object):
     def N(self):
         """
         A class method to return the current value of the N property.
-        
+
         Parameter:
             self: a lorenz_solver class object.
 
@@ -272,7 +272,7 @@ class lorenz_solver(object):
     def t(self):
         """
         A class method to return the current value of the t property.
-        
+
         Parameter:
             self: a lorenz_solver class object.
 
@@ -318,7 +318,7 @@ class lorenz_solver(object):
     def euler_path(self):
         """
         A class method to return the current value of the euler_path property.
-        
+
         Parameter:
             self: a lorenz_solver class object.
 
@@ -339,7 +339,7 @@ class lorenz_solver(object):
         A class method to calculate the trajectory of the Lorenz attractor
         for the given parameter set. The trajectory is added to self as a
         euler_path attribute.
-        
+
         Parameter:
             self: a lorenz_solver class object.
 
@@ -359,7 +359,7 @@ class lorenz_solver(object):
             print('The stepsize (t) cannot be less than 0.')
             return False
         # initialize array of zeros with shape nrow = N and ncol = 3
-        path = np.zeros(shape=(self._N,3))
+        path = np.zeros(shape=(self._N, 3))
         # initialize the path array with the input coordinates from class obj.
         path[0, :] = self._init
         # the solver initiates in the second row of path with first row values
@@ -373,19 +373,19 @@ class lorenz_solver(object):
                 path[n, 0] = (s * self._t + path[n - 1, 0])
             except FloatingPointError:
                 raise Warning('euler: Floating point error when calculating '+
-                      'position in x for step {} out of {} steps'.format(
-                              n,self._N))
+                              'position in x for step '+
+                              '{} out of {} steps'.format(n, self._N))
                 return False
             # calculate y coordinate for the n'th step
             try:
                 r = self._rho - path[n - 1, 2]
-            
+
                 path[n, 1] = ((path[n - 1, 0] * r - path[n - 1, 1]) * self._t
                               + path[n - 1, 1])
             except FloatingPointError:
                 print('euler: Floating point error when calculating '+
-                      'position in y for step {} out of {} steps'.format(
-                              n,self._N))
+                      'position in y for step '+
+                      '{} out of {} steps'.format(n, self._N))
                 return False
             # calculate z coordinate for the n'th step
             try:
@@ -394,8 +394,8 @@ class lorenz_solver(object):
                               + path[n - 1, 2])
             except FloatingPointError:
                 print('euler: Floating point error when calculating '+
-                      'position in z for step {} out of {} steps'.format(
-                              n,self._N))
+                      'position in z for step '+
+                      '{} out of {} steps'.format(n, self._N))
                 return False
             n += 1  # increment n by 1
 

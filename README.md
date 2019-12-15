@@ -46,7 +46,7 @@ lorenz  <br />
 ### The test cases
 - The program contains 5 test cases with predefined parameters,
 running these cases will generate data file and pdf plots in the
-results directory with a filder for each case, eg. './results/case1/'.
+results directory with a folder for each case, eg. './results/case1/'.
 case 1 '$cd cases $python case1.py'
 	- testcase1 observations: These parameters result in a single spiral
 	which is directed inwards to the center. Initially the euclidean distance

@@ -16,9 +16,9 @@ differential equations which has been implemented using
 a simple Euler approach.
 
 ## Files and dir structure
-lorenz
-│   README.md  
-│
+lorenz  <br />
+│   README.md  <br /> 
+│  <br />
 └───cases
 │   │   testcase1.py
 │   │   testcase2.py

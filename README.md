@@ -67,7 +67,7 @@ which writed the lorenz_solver class object and plots to file respectively.
 The loading functionality is implemented in the read_solver function. It
 reads the saved lorenz_solver class object.
 
-#### The run function (run.py)
+#### The run functions (run.py)
 The run.py file contains master functions which brings together functionality
 from the other functions.
 
@@ -81,7 +81,7 @@ The load_case function:
 - Consttucts the 2d and 3d plots from this object and prints these to the console.
 - If the return_obj is set to True, load_case also returns the loaded object.
 
-#### Testing the program
+### Testing the program
 The './test/test.py' file contains the nessesary code to run basic tests of the
 program using unittest. To run the tests use: '$cd test $python test.py'.
 Tests include:

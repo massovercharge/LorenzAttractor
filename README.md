@@ -58,7 +58,7 @@ associated with the parameters that generated it.
 
 #### The plot functions (plot.py)
 The plot functions are able to generate 2d projections and a 3d projection
-of a trajectory when a lorenz_solver object i supplied.
+of a trajectory when a lorenz_solver class object is supplied.
 
 #### The filehandling functions (filehandling.py)
 The file saving functionality is implemented in write_solver and write_plot

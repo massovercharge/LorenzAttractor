@@ -77,6 +77,22 @@ Please see the doc string for each function for documentation.
 
 ### Testing the program
 The './test/test.py' file contains the nessesary code to run basic tests of the
-program using unittest. To run the tests use: '$cd test $python test.py'
+program using unittest. To run the tests use: '$cd test $python test.py'.
+Tests include:
+- For the solver:
+	- Test a minimal working example for the euler solver.
+	- Test what happens if only two initial corrdinates are supplied to the solver
+	- Test case with N=0
+	- Test case with t=0
+	- Test case if input parameters result in floating point error while calculating
+	a trajectory.
+- For the plot functions:
+	- Test case if the supplied lorenz_solver class object is missing the euler_path
+	attribute (plot2d).
+	- Test case if the supplied lorenz_solver class object is missing the euler_path
+	attribute (plot3d).
+- For the filehandling functions:
+	- Test case for missing file to read_solver function.
+
 
 # 

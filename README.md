@@ -81,9 +81,9 @@ program using unittest. To run the tests use: '$cd test $python test.py'.
 Tests include:
 - For the solver:
 	- Test a minimal working example for the euler solver.
-	- Test what happens if only two initial corrdinates are supplied to the solver
-	- Test case with N=0
-	- Test case with t=0
+	- Test case for only two initial corrdinates are supplied to the solver.
+	- Test case with number of time steps N=0.
+	- Test case with time step size t=0.
 	- Test case if input parameters result in floating point error while calculating
 	a trajectory.
 - For the plot functions:

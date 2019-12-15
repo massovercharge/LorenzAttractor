@@ -19,30 +19,29 @@ a simple Euler approach.
 lorenz  <br />
 │   README.md  <br /> 
 │  <br />
-└───cases
-│   │   testcase1.py
-│   │   testcase2.py
-│   │   testcase3.py
-│   │   testcase4.py
-│   │   testcase5.py
-│   
-└───lorenz
-│   │   __init__.py
-│   │   filehandling.py
-│   │   plot.py
-│   │   run.py
-│   │   solver.py
-│   
-└───results
-│   └───case1
-│   └───case2
-│   └───case3
-│   └───case4
-│   └───case5
-│   
-└───test
-    │   test.py
-
+└───cases  <br />
+│   │   testcase1.py  <br />
+│   │   testcase2.py  <br />
+│   │   testcase3.py  <br />
+│   │   testcase4.py  <br />
+│   │   testcase5.py  <br />
+│  <br />
+└───lorenz  <br />
+│   │   __init__.py  <br />
+│   │   filehandling.py  <br />
+│   │   plot.py  <br />
+│   │   run.py  <br />
+│   │   solver.py  <br />
+│     <br />
+└───results  <br />
+│   └───case1  <br />
+│   └───case2  <br />
+│   └───case3  <br />
+│   └───case4  <br />
+│   └───case5  <br />
+│     <br />
+└───test  <br />
+    │   test.py  <br />
 ## The program
 ### The test cases
 - The program contains 5 test cases with predefined parameters,

@@ -41,10 +41,68 @@ lorenz  <br />
 │   └───case5  <br />
 │     <br />
 └───test  <br />
-    │   test.py  <br />
+│   │   test.py  <br />
 
 ## The program
+### The functions
+#### The solver (solver.py)
+The program is build up around the lorenz_solver class contained in the 
+solver.py file. This class has attributes for all the parameters that are
+needed in the 'euler' solver function. The parameters are supplied to the
+class when it is initiated. The trajectory (euler_path) can then be calculated
+by using the euler() class method on the lorenz_solver class object.
+The lorenz_solver class is constructed using properties, this was done
+in order to delete any euler_path from the class object if a new value is
+assigned to any parameter in the object. In this way an euler_path is always
+associated with the parameters that generated it.
+
+#### The plot functions (plot.py)
+The plot functions are able to generate 2d projections and a 3d projection
+of a trajectory when a lorenz_solver object i supplied.
+
+#### The filehandling functions (filehandling.py)
+The file saving functionality is implemented in write_solver and write_plot
+which writed the lorenz_solver class object and plots to file respectively.
+
+The loading functionality is implemented in the read_solver function. It
+reads the saved lorenz_solver class object.
+
+#### The run function (run.py)
+The run.py file contains master functions which brings together functionality
+from the other functions.
+
+The save_case function:
+- Saves a lorenz_solver class object to file.
+- Generates plots based on the supplied object.
+- Saves these plots to file.
+
+The load_case function:
+- Loads a lorenz_solver object from file.
+- Consttucts the 2d and 3d plots from this object and prints these to the console.
+- If the return_obj is set to True, load_case also returns the loaded object.
+
+#### Testing the program
+The './test/test.py' file contains the nessesary code to run basic tests of the
+program using unittest. To run the tests use: '$cd test $python test.py'.
+Tests include:
+- For the solver:
+	- Test a minimal working example for the euler solver.
+	- Test case for only two initial corrdinates are supplied to the solver.
+	- Test case with number of time steps N=0.
+	- Test case with time step size t=0.
+	- Test case if input parameters result in floating point error while calculating
+	a trajectory.
+- For the plot functions:
+	- Test case if the supplied lorenz_solver class object is missing the euler_path
+	attribute (plot2d).
+	- Test case if the supplied lorenz_solver class object is missing the euler_path
+	attribute (plot3d).
+- For the filehandling functions:
+	- Test case for missing file to read_solver function.
+
+
 ### The test cases
+
 - The program contains 5 test cases with predefined parameters,
 running these cases will generate data file and pdf plots in the
 results directory with a folder for each case, eg. './results/case1/'. 
@@ -72,27 +130,7 @@ To run case 1 use: '$cd cases $python testcase1.py'
 	- testcase5 observations: The trajectory formed by these parameters mostly
 	resemble testcase3, with narrow eyes. However, the figure-8 seams to cover a
 	larger area than testcase3.
-### The functions
-Please see the doc string for each function for documentation.
 
-### Testing the program
-The './test/test.py' file contains the nessesary code to run basic tests of the
-program using unittest. To run the tests use: '$cd test $python test.py'.
-Tests include:
-- For the solver:
-	- Test a minimal working example for the euler solver.
-	- Test case for only two initial corrdinates are supplied to the solver.
-	- Test case with number of time steps N=0.
-	- Test case with time step size t=0.
-	- Test case if input parameters result in floating point error while calculating
-	a trajectory.
-- For the plot functions:
-	- Test case if the supplied lorenz_solver class object is missing the euler_path
-	attribute (plot2d).
-	- Test case if the supplied lorenz_solver class object is missing the euler_path
-	attribute (plot3d).
-- For the filehandling functions:
-	- Test case for missing file to read_solver function.
 
 
 # 

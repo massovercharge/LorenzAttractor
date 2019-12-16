@@ -124,7 +124,8 @@ The plotting functions are the most time consuming part of the code. Running
 the plot2d function for an instance of testcase 1 with 10.000 iterations took 
 around 1 second and for the plot3d it was around 0.6 seconds. For the same instance
 approx. 0.1 seconds was spend on initiation of the class object and calculation of the
-trajectory.
+trajectory. These timed runs were done on a Win10 machine with an Intel Core i5-8350U
+CPU with a base clock of 1.7GHz and a max boost clock of 1.9GHz.
 
 ### The test cases
 

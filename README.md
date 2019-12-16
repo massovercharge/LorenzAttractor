@@ -155,7 +155,7 @@ To run case 1 use: '$cd cases $python testcase1.py'
 	- testcase2 observations: These parameters form a trajectory which resembles
 	a slightly distorded figure-8. The size of each eye in the figure 8 is
 	approximately 1/5 the diameter of each of the two discs forming the figure.
-	The euclidean distance traveled per timestep seams to decrease as the
+	The euclidean distance traveled per timestep seems to decrease as the
 	trajectory approaches each eye of the figure-8 but begin increasing
 	again before returning to the other eye. The closer the trajectory
 	gets to each of the centers of the eyes, the smaller the distance travelled 
@@ -171,7 +171,7 @@ To run case 1 use: '$cd cases $python testcase1.py'
 	roughly 1/4 the diameter of each disc.
 	![testcase4 with plot3d function](results/case4/case4_plot3d.png)
 	- testcase5 observations: The trajectory formed by these parameters mostly
-	resemble testcase3, with narrow eyes. However, the figure-8 seams to cover a
+	resemble testcase3, with narrow eyes. However, the figure-8 seems to cover a
 	larger area than testcase3.
 	![testcase5 with plot3d function](results/case5/case5_plot3d.png)
 

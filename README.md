@@ -141,7 +141,7 @@ To run case 1 use: '$cd cases $python testcase1.py'
 	indicate acceleration. But after this initial acceleration phase 
 	the euclidean distance traversed per timestep decreases as the trajectory 
 	approaches the center of the spiral.  
-	![testcase1 with plot3d function](results/case1/case1_plot3d.pdf)
+	![testcase1 with plot3d function](results/case1/case1_plot3d.png)
 	- testcase2 observations: These parameters form a trajectory which resembles
 	a slightly distorded figure-8. The size of each eye in the figure 8 is
 	approximately 1/5 the diameter of each of the two discs forming the figure.
@@ -150,16 +150,20 @@ To run case 1 use: '$cd cases $python testcase1.py'
 	again before returning to the other eye. The closer the trajectory
 	gets to each of the centers of the eyes, the smaller the distance travelled 
 	per timestep.
+	![testcase1 with plot3d function](results/case2/case2_plot3d.png)
 	- testcase3 observations: The trajectory formed by these parameters also
 	form a distorded figure-8, however this time the eyes are much smaller
 	relative to the disc. Again, The closer the trajectory gets to each of 
 	the centers of the eyes, the smaller the distance travelled per timestep.
+	![testcase1 with plot3d function](results/case3/case3_plot3d.png)
 	- testcase4 observations: The trajectory formed by these parameters
 	resemble case 2 and 3, this time the diameter of the two eyes are
 	roughly 1/4 the diameter of each disc.
+	![testcase1 with plot3d function](results/case4/case4_plot3d.png)
 	- testcase5 observations: The trajectory formed by these parameters mostly
 	resemble testcase3, with narrow eyes. However, the figure-8 seams to cover a
 	larger area than testcase3.
+	![testcase1 with plot3d function](results/case5/case5_plot3d.png)
 
 
 

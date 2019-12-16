@@ -1,7 +1,7 @@
 # Implementation of the Lorenz Attractor in python
 
 The following paragraphs will give an introduction into
-the programme context.
+the program context.
 
 - Author: Daniel Tandrup Weltz Wollenberg
 

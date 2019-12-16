@@ -11,6 +11,7 @@ differential equations which has been implemented using
 a simple Euler approach.
 
 ## Files and dir structure
+```bash
 lorenz  <br />
 │   README.md  <br />
 │  <br />
@@ -37,6 +38,7 @@ lorenz  <br />
 │     <br />
 └───test  <br />
 │   │   test.py  <br />
+```
 
 ## The program
 ### The functions

@@ -12,32 +12,51 @@ a simple Euler approach.
 
 ## Files and dir structure
 ```bash
-lorenz  <br />
-│   README.md  <br />
-│  <br />
-└───cases  <br />
-│   │   testcase1.py  <br />
-│   │   testcase2.py  <br />
-│   │   testcase3.py  <br />
-│   │   testcase4.py  <br />
-│   │   testcase5.py  <br />
-│     <br />
-└───lorenz  <br />
-│   │   __init__.py  <br />
-│   │   filehandling.py  <br />
-│   │   plot.py  <br />
-│   │   run.py  <br />
-│   │   solver.py  <br />
-│     <br />
-└───results  <br />
-│   └───case1  <br />
-│   └───case2  <br />
-│   └───case3  <br />
-│   └───case4  <br />
-│   └───case5  <br />
-│     <br />
-└───test  <br />
-│   │   test.py  <br />
+lorenz
+│   README.md
+│
+└───cases
+│   │   testcase1.py
+│   │   testcase2.py
+│   │   testcase3.py
+│   │   testcase4.py
+│   │   testcase5.py
+│
+└───lorenz
+│   │   __init__.py
+│   │   filehandling.py
+│   │   plot.py
+│   │   run.py
+│   │   solver.py
+│
+└───results
+│   └───case1
+│   │   │   case1.pk1
+│   │   │   case1_plot2d.pdf
+│   │   │   case1_plot3d.pdf
+│   │
+│   └───case2
+│   │   │   case2.pk1
+│   │   │   case2_plot2d.pdf
+│   │   │   case2_plot3d.pdf
+│   │
+│   └───case3
+│   │   │   case3.pk1
+│   │   │   case3_plot2d.pdf
+│   │   │   case3_plot3d.pdf
+│   │
+│   └───case4
+│   │   │   case4.pk1
+│   │   │   case4_plot2d.pdf
+│   │   │   case4_plot3d.pdf
+│   │
+│   └───case5
+│       │   case5.pk1
+│       │   case5_plot2d.pdf
+│       │   case5_plot3d.pdf
+│
+└───test
+    │   test.py
 ```
 
 ## The program

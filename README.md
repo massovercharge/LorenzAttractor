@@ -1,10 +1,5 @@
-# 1. PYTHON + SCIENTIFIC COMPUTING, PROJECT
-### Implementation of the Lorenz Attractor in python
-A repository containing a solution to the exam project for the
-PhD course "Scientific Computing using Python, part 1", 
-held at Aalborg University, November 2019.
+# Implementation of the Lorenz Attractor in python
 
-#  
 The following paragraphs will give an introduction into
 the programme context.
 

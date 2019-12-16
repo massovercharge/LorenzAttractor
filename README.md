@@ -64,13 +64,14 @@ lorenz
 #### The solver (solver.py)
 The program is build up around the lorenz_solver class contained in the 
 solver.py file. This class has attributes for all the parameters that are
-needed in the 'euler' solver function. The parameters are supplied to the
+needed in the 'euler' class method. The parameters are supplied to the
 class when it is initiated. The trajectory (euler_path) can then be calculated
-by using the euler() class method on the lorenz_solver class object.
-The lorenz_solver class is constructed using properties, this was done
-in order to delete any euler_path from the class object if a new value is
-assigned to any parameter in the object. In this way an euler_path is always
-associated with the parameters that generated it.
+by using the euler class method on the lorenz_solver class object.
+The parameter attributes of the lorenz_solver class are all defined with property 
+decorators, this was done in order to delete any euler_path from the class
+object if a new value is assigned to any parameter in the object. In this way
+an euler_path is always associated with the parameters that generated it
+through the class object.
 
 #### The plot functions (plot.py)
 The plot functions are able to generate 2d projections and a 3d projection

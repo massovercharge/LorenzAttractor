@@ -144,7 +144,7 @@ To run case 1 use: '$cd cases $python testcase1.py'
 	- testcase2 observations: These parameters form a trajectory which resembles
 	a slightly distorded figure-8. The size of each eye in the figure 8 is
 	approximately 1/5 the diameter of each of the two discs forming the figure.
-	The euclidean distance traveled per timestep seams to derease as the
+	The euclidean distance traveled per timestep seams to decrease as the
 	trajectory approaches each eye of the figure-8 but begin increasing
 	again before returning to the other eye. The closer the trajectory
 	gets to each of the centers of the eyes, the smaller the distance travelled 

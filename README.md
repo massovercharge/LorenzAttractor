@@ -71,7 +71,9 @@ The parameter attributes of the lorenz_solver class are all defined with propert
 decorators, this was done in order to delete any euler_path from the class
 object if a new value is assigned to any parameter in the object. In this way
 an euler_path is always associated with the parameters that generated it
-through the class object.
+through the class object. In the future other solve methods could be added to
+the lorenz_solver class while taking advantage of the current parameter management
+functionality.
 
 #### The plot functions (plot.py)
 The plot functions are able to generate 2d projections and a 3d projection

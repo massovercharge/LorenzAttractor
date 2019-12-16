@@ -101,6 +101,12 @@ Tests include:
 	- Test case for missing file to read_solver function.
 
 
+The plotting functions are the most time consuming part of the code. Running
+the plot2d function for an instance of testcase 1 with 10.000 iterations took 
+around 1 second and for the plot3d it was around 0.6 seconds. For the same instance
+approx. 0.1 seconds was spend on initiation of the class object and calculation of the
+trajectory.
+
 ### The test cases
 
 - The program contains 5 test cases with predefined parameters,

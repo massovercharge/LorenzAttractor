@@ -33,27 +33,37 @@ lorenz
 │   └───case1
 │   │   │   case1.pk1
 │   │   │   case1_plot2d.pdf
+│   │   │   case1_plot2d.png
 │   │   │   case1_plot3d.pdf
+│   │   │   case1_plot3d.png
 │   │
 │   └───case2
 │   │   │   case2.pk1
 │   │   │   case2_plot2d.pdf
+│   │   │   case2_plot2d.png
 │   │   │   case2_plot3d.pdf
+│   │   │   case2_plot3d.png
 │   │
 │   └───case3
 │   │   │   case3.pk1
 │   │   │   case3_plot2d.pdf
+│   │   │   case3_plot2d.png
 │   │   │   case3_plot3d.pdf
+│   │   │   case3_plot3d.png
 │   │
 │   └───case4
 │   │   │   case4.pk1
 │   │   │   case4_plot2d.pdf
+│   │   │   case4_plot2d.png
 │   │   │   case4_plot3d.pdf
+│   │   │   case4_plot3d.png
 │   │
 │   └───case5
 │       │   case5.pk1
 │       │   case5_plot2d.pdf
+│       │   case5_plot2d.png
 │       │   case5_plot3d.pdf
+│       │   case5_plot3d.png
 │
 └───test
     │   test.py

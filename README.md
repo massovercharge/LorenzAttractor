@@ -55,6 +55,9 @@ associated with the parameters that generated it.
 The plot functions are able to generate 2d projections and a 3d projection
 of a trajectory when a lorenz_solver class object is supplied.
 
+The color of the plotted trajectory indicates relative euclidean distance
+between the current and previous timepoint.
+
 #### The filehandling functions (filehandling.py)
 The file saving functionality is implemented in write_solver and write_plot
 which writed the lorenz_solver class object and plots to file respectively.

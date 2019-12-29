@@ -110,7 +110,7 @@ The save_case function:
 
 The load_case function:
 - Loads a lorenz_solver object from file.
-- Consttucts the 2d and 3d plots from this object and prints these to the console.
+- Constructs the 2d and 3d plots from this object and prints these to the console.
 - If the return_obj is set to True, load_case also returns the loaded object.
 
 ### Testing the program

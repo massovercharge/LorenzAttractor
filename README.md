@@ -94,7 +94,7 @@ between the current and previous timepoint.
 
 #### The filehandling functions (filehandling.py)
 The file saving functionality is implemented in write_solver and write_plot
-which writed the lorenz_solver class object and plots to file respectively.
+which write the lorenz_solver class object and plots to file respectively.
 
 The loading functionality is implemented in the read_solver function. It
 reads the saved lorenz_solver class object.
